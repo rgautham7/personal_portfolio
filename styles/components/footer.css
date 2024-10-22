@@ -1,0 +1,52 @@
+.footer {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0.5rem;
+}
+
+.footer_social .bi {
+    font-size: 1.75rem;
+    margin: 0.5rem;
+}
+
+
+.footer_href {
+    color: var(--clr-indigo);
+    text-decoration: none;
+}
+
+/* xs */
+@media(min-width: 475px) {
+
+}
+
+/* sm */
+@media(min-width: 640px) {
+
+}
+
+/* md */
+@media(min-width: 768px) {
+
+}
+
+/* lg */
+@media(min-width: 1024px) {
+
+}
+
+/* xl */
+@media(min-width: 1280px) {
+
+}
+
+/* 2xl */
+@media(min-width: 1536px) {
+
+}
