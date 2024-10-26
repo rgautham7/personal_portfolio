@@ -8,3 +8,4 @@ import "../styles/components/contact.css";
 import "../styles/components/footer.css";
 import "../styles/utils.css";
 
+import './theme.js';

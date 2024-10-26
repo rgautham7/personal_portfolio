@@ -27,6 +27,12 @@
     --size-8xl: 6rem;
     --size-9xl: 8rem;
     --size-10xl: 10rem;
+
+    
+    --clr-bg: var(--clr-dark);
+    --clr-text: var(--clr-light);
+    --clr-text-muted: var(--clr-slate600);
+    --clr-title: var(--clr-light);
 }
 
 ::-webkit-scrollbar {
@@ -44,9 +50,10 @@ html {
 }
 
 body {
-    font-family: 'General Sans', sans-serif;
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+  font-family: 'General Sans', sans-serif;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 img, 
@@ -191,5 +198,14 @@ strong {
 @keyframes go {
   to {
     inset-inline-start: calc(var(--marquee-item-width) * -1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-bg: var(--clr-light);
+    --clr-text: var(--clr-dark);
+    --clr-text-muted: var(--clr-slate600);
+    --clr-title: var(--clr-dark); /* Add this line */
   }
 }
