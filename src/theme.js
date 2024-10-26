@@ -1,8 +1,4 @@
-const themeToggle = document.getElementById('theme-toggle');
-const sunIcon = themeToggle.querySelector('.sun-icon');
-const moonIcon = themeToggle.querySelector('.moon-icon');
-
-function setTheme(theme) {
+export function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
   
@@ -22,6 +18,10 @@ function setTheme(theme) {
     document.documentElement.style.setProperty('--clr-title', 'var(--clr-dark)');
   }
 }
+
+const themeToggle = document.getElementById('theme-toggle');
+const sunIcon = themeToggle.querySelector('.sun-icon');
+const moonIcon = themeToggle.querySelector('.moon-icon');
 
 themeToggle.addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');

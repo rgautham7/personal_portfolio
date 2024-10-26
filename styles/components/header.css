@@ -10,10 +10,18 @@
 }
 
 .header_bars {
-    color: var(--clr-light);
+    color: var(--clr-text);
     width: var(--size-2xl);
     height: var(--size-2xl);
     display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header_bars svg {
+    width: 100%;
+    height: 100%;
 }
 
 /* xs */
@@ -114,4 +122,91 @@
 /* 2xl */
 @media(min-width: 1536px) {
 
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .mobile-nav.active {
+    transform: translateY(0);
+  }
+  
+  .mobile-nav__close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--clr-text);
+  }
+  
+  .mobile-nav__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .mobile-nav__link {
+    display: block;
+    padding: 1rem;
+    font-size: var(--size-xl);
+    color: var(--clr-text);
+    text-decoration: none;
+  }
+  
+  .mobile-nav__theme-toggle {
+    margin-top: 1rem;
+    font-size: var(--size-xl);
+  }
+  
+  .mobile-nav__resume {
+    margin-top: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+
+  // Add this at the end of the file
+.mobile-nav__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+}
+
+.mobile-nav__theme-toggle .sun-icon,
+.mobile-nav__theme-toggle .moon-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-nav__theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .mobile-nav__theme-toggle .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .mobile-nav__theme-toggle .moon-icon {
+  display: none;
 }
