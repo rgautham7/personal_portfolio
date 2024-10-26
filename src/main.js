@@ -8,14 +8,7 @@ import "../styles/components/contact.css";
 import "../styles/components/footer.css";
 import "../styles/utils.css";
 
-import { setTheme } from './theme.js';
-
-// Add this function to handle theme toggling
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  setTheme(newTheme);
-}
+import './theme.js';
 
 // Mobile menu functionality
 const mobileMenuBtn = document.querySelector('.header_bars');
@@ -36,11 +29,3 @@ mobileNavLinks.forEach(link => {
     mobileNav.classList.remove('active');
   });
 });
-
-// Mobile theme toggle
-const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-mobileThemeToggle.addEventListener('click', toggleTheme);
-
-// Desktop theme toggle
-const desktopThemeToggle = document.getElementById('theme-toggle');
-desktopThemeToggle.addEventListener('click', toggleTheme);
