@@ -42,6 +42,7 @@
   
   .work__project-btn {
     font-size: var(--size-sm);
+    margin: 0px 15px;
   }
   
   .work__project-subtitle {
